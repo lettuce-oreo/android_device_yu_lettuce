@@ -46,6 +46,7 @@ ro.sys.fw.dex2oat_thread_count=4
 # Display
 debug.hwui.use_buffer_age=false
 debug.composition.type=c2d
+debug.cpurend.vsync=false
 debug.mdpcomp.idletime=600
 debug.sf.disable_backpressure=1
 debug.sf.latch_unsignaled=1
