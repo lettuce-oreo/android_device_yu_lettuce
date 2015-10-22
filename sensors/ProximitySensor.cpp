@@ -190,7 +190,6 @@ int ProximitySensor::enable(int32_t, int en) {
             }
             write(fd, buf, sizeof(buf));
             close(fd);
-            return 0;
         } else {
             ALOGE("open %s failed.(%s)\n", input_sysfs_path, strerror(errno));
             return -1;
@@ -198,6 +197,18 @@ int ProximitySensor::enable(int32_t, int en) {
     } else if (flags) {
             mHasPendingEvent = true;
     }
+
+        if (mEnabled) {
+            struct input_absinfo absinfo;
+            int rc = ioctl(data_fd, EVIOCGABS(EVENT_TYPE_PROXIMITY), &absinfo);
+            if (rc < 0) {
+                ALOGE("ProximitySensor: EVIOCGABS error: %d", errno);
+                return -errno;
+            }
+
+            mPendingEvent.distance = indexToValue(absinfo.value);
+            return 0;
+        }
     return 0;
 }
 
