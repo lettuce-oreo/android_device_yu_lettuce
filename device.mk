@@ -134,6 +134,8 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 PRODUCT_PACKAGES += \
     fstab.qcom \
     init.target.rc \
+    init.qcom.devstart.sh \
+    init.qcom.devwait.sh \
     init.qcom.rc \
     init.qcom.mem.sh \
     init.qcom.power.rc \
