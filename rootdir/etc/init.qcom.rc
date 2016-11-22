@@ -47,6 +47,10 @@ on fs
     mkdir /persist/data 0700 system system
     restorecon_recursive /persist
 
+on post-fs
+    # Start devices by sysfs trigger
+    start devstart_sh
+
 # msm specific files that need to be created on /data
 on post-fs-data
     mkdir /data/fdAlbum 0770 camera camera
@@ -106,7 +110,8 @@ on early-boot
     # set RLIMIT_MEMLOCK to 64MB
     setrlimit 8 67108864 67108864
 
-    write /sys/kernel/boot_adsp/boot 1
+    # Busy loop to wait for devices booted by devstart_sh just in case device not ready
+    exec - root root system -- /system/vendor/bin/init.qcom.devwait.sh
 
 on boot
     chown bluetooth bluetooth /sys/module/bluetooth_power/parameters/power
@@ -366,6 +371,13 @@ service wcnss-service /system/vendor/bin/wcnss_service
     oneshot
 
 service qcom-mem /system/vendor/bin/init.qcom.mem.sh
+    disabled
+    oneshot
+
+service devstart_sh /system/vendor/bin/init.qcom.devstart.sh
+    class main
+    user root
+    group root system
     disabled
     oneshot
 
