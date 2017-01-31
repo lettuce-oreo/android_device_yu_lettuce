@@ -56,6 +56,10 @@ PRODUCT_PACKAGES += \
 $(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
 $(call inherit-product, frameworks/native/build/phone-xxhdpi-2048-hwui-memory.mk)
 
+# Doze
+PRODUCT_PACKAGES += \
+    YUDoze
+
 # GPS
 PRODUCT_PACKAGES += \
     gps.msm8916
