@@ -5,6 +5,7 @@ persist.vendor.audio.fluence.voicerec=false
 persist.vendor.audio.fluence.speaker=true
 
 # Boot
+ro.build.shutdown_timeout=0
 sys.vendor.shutdown.waittime=500
 
 # Camera
