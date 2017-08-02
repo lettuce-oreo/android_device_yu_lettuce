@@ -4,6 +4,9 @@ persist.vendor.audio.fluence.voicecall=true
 persist.vendor.audio.fluence.voicerec=false
 persist.vendor.audio.fluence.speaker=true
 
+# Boot
+sys.vendor.shutdown.waittime=500
+
 # Camera
 persist.camera.cpp.duplication=false
 persist.camera.hal.debug.mask=0
