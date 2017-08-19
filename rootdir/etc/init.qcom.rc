@@ -114,6 +114,14 @@ on post-fs-data
 
     mkdir /data/diag_logs 0777 system system
 
+    # Remove existing log
+    rm /data/LOGCAT_P.txt
+
+service logcat_debug /system/bin/logcat -b -all -f /data/LOGCAT_P.txt -v threadtime
+    class main
+    user root
+    group system
+
 on early-boot
     # set RLIMIT_MEMLOCK to 64MB
     setrlimit 8 67108864 67108864
