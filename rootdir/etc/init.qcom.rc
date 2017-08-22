@@ -151,6 +151,9 @@ on boot
     # Create NETMGR daemon socket area
     mkdir /dev/socket/netmgr 0750 radio radio
 
+    # Allow RILD to access /proc/cmdline
+    chmod 0644 /proc/cmdline
+
     chmod 0444 /sys/devices/platform/msm_hsusb/gadget/usb_state
 
     # For bridgemgr daemon to inform the USB driver of the correct transport
