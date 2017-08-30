@@ -6,6 +6,7 @@ audio.offload.video=true
 persist.vendor.audio.fluence.speaker=true
 persist.vendor.audio.fluence.voicecall=true
 persist.vendor.audio.fluence.voicerec=false
+ro.audio.flinger_standbytime_ms=300
 ro.vendor.audio.sdk.fluencetype=fluence
 vendor.audio.av.streaming.offload.enable=true
 vendor.audio.offload.buffer.size.kb=64
