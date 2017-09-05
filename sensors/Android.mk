@@ -16,6 +16,7 @@ LOCAL_SRC_FILES := \
     VirtualSensor.cpp \
     sensors_XML.cpp
 
+
 LOCAL_CFLAGS += -DLOG_TAG=\"Sensors\"
 
 LOCAL_C_INCLUDES := \
@@ -63,7 +64,7 @@ include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
 
-LOCAL_MODULE := sensors.$(TARGET_BOARD_PLATFORM)
+LOCAL_MODULE := sensors.lettuce
 
 LOCAL_MODULE_RELATIVE_PATH := hw
 LOCAL_PROPRIETARY_MODULE := true
