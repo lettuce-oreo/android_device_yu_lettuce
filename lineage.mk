@@ -18,6 +18,10 @@ $(call inherit-product, device/yu/lettuce/full_lettuce.mk)
 # Inherit some common LineageOS stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
+# Inherit Android Go default properties
+$(call inherit-product, build/make/target/product/go_defaults_common.mk)
+$(call inherit-product-if-exists, frameworks/base/data/sounds/AudioPackageGo.mk)
+
 # Must define platform variant before including any common things
 TARGET_BOARD_PLATFORM_VARIANT := msm8916
 

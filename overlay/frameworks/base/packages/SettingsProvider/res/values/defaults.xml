@@ -18,4 +18,6 @@
 -->
 <resources>
     <bool name="def_bluetooth_on">false</bool>
+    <bool name="def_restrict_background_data">true</bool>
+    <bool name="def_accelerometer_rotation">false</bool>
 </resources>

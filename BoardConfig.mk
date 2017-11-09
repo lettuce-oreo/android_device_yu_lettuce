@@ -20,6 +20,9 @@ include device/cyanogen/msm8916-common/BoardConfigCommon.mk
 
 DEVICE_PATH := device/yu/lettuce
 
+# Android Go
+TARGET_HAS_LOW_RAM := true
+
 # Audio
 AUDIO_FEATURE_ENABLED_MULTI_VOICE_SESSIONS := true
 
