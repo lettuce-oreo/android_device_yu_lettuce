@@ -20,6 +20,10 @@ persist.sys.purgeable_assets=1
 # Display
 ro.sf.lcd_density=320
 
+# Fling velocities
+ro.min.fling_velocity=160
+ro.max.fling_velocity=20000
+
 # Google DNS
 net.dns1=8.8.8.8
 net.dns2=8.8.4.4
