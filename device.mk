@@ -130,6 +130,10 @@ PRODUCT_PACKAGES += \
     libshims_camera \
     libshims_ims
 
+# TextClassifier smart selection model
+PRODUCT_PACKAGES += \
+    textclassifier.smartselection.bundle1
+
 # Telephony
 PRODUCT_PACKAGES += telephony-ext
 PRODUCT_BOOT_JARS += telephony-ext
