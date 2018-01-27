@@ -172,6 +172,10 @@ ro.telephony.call_ring.multiple=false
 # Sensors
 ro.fusion.magfield.max=250
 
+# Touch response
+persist.vendor.qti.inputopts.enable=true
+persist.vendor.qti.inputopts.movetouchslop=0.6
+
 # Wi-Fi
 wifi.interface=wlan0
 
