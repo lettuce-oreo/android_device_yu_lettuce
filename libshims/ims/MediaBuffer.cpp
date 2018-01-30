@@ -14,6 +14,13 @@
  * limitations under the License.
  */
 
-/* TODO: Actually provide implementations for these function! */
+#include <ui/GraphicBuffer.h>
+#include <media/stagefright/MediaBuffer.h>
 
-void _ZNK7android11MediaBuffer8refcountEv() {}
+extern "C" {
+
+int _ZNK7android11MediaBuffer8refcountEv(android::MediaBuffer *thisptr) {
+    return thisptr->refcount();
+}
+
+}
