@@ -91,3 +91,6 @@ ro.ril.disable.power.collapse=1
 
 # Sensors
 ro.fusion.magfield.max=250
+
+# ZRAM
+ro.config.zram=true
