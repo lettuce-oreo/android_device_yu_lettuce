@@ -76,6 +76,10 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-impl \
     camera.device@3.2-impl
 
+# Doze mode
+PRODUCT_PACKAGES += \
+    XiaomiDoze
+
 # Dalvik
 $(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
 
