@@ -63,6 +63,7 @@ on enable-low-power
     write /dev/cpuset/system-background/cpus 0-1
     write /dev/cpuset/top-app/cpus 0-3
     write /dev/cpuset/camera-daemon/cpus 0-3
+    write /dev/cpuset/restricted/cpus 0-3
 
     # disable wakelocks
     write /sys/module/wakeup/parameters/enable_qcom_rx_wakelock_ws 0
