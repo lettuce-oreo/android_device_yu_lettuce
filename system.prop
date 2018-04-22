@@ -12,6 +12,11 @@ sys.vendor.shutdown.waittime=500
 persist.camera.cpp.duplication=false
 persist.camera.hal.debug.mask=0
 
+# Dalvik
+dalvik.vm.checkjni=false
+dalvik.vm.verify-bytecode=false
+persist.sys.purgeable_assets=1
+
 # Display
 ro.sf.lcd_density=320
 
