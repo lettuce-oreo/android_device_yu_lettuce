@@ -271,13 +271,13 @@ vendor/lib/libmdmdetect.so|259b9a5ddbc56e42273879b36f8ec9892f2e3c08
 # Radio - IMS
 -app/imssettings/imssettings.apk
 -app/ims/ims.apk
--framework/imscmlibrary.jar
-bin/ims_rtp_daemon
-bin/imscmservice
-bin/imsdatadaemon
-bin/imsqmidaemon
-etc/permissions/imscm.xml
-etc/permissions/qti_permissions.xml
+-vendor/framework/imscmlibrary.jar
+vendor/bin/ims_rtp_daemon
+vendor/bin/imscmservice
+vendor/bin/imsdatadaemon
+vendor/bin/imsqmidaemon
+vendor/etc/permissions/imscm.xml
+vendor/etc/permissions/qti_permissions.xml
 vendor/lib64/lib-dplmedia.so
 vendor/lib64/lib-imscamera.so
 vendor/lib64/lib-imsdpl.so
