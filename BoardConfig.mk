@@ -81,6 +81,9 @@ ifeq ($(WITH_TWRP),true)
 include $(DEVICE_PATH)/twrp.mk
 endif
 
+# Use Snapdragon LLVM, if available
+TARGET_USE_SDCLANG := true
+
 # Widevine
 BOARD_WIDEVINE_OEMCRYPTO_LEVEL := 3
 
