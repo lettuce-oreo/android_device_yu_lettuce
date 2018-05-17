@@ -81,5 +81,9 @@ rild.libargs=-d /dev/smd0
 ro.config.always_show_roaming=true
 ro.telephony.default_network=9,9
 
+# Power Manager
+pm.sleep_mode=1
+ro.ril.disable.power.collapse=1
+
 # Sensors
 ro.fusion.magfield.max=250
