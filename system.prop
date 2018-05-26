@@ -99,7 +99,6 @@ persist.volte_enabled_by_hw=1
 telephony.lteOnCdmaDevice=1
 
 # Media
-persist.media.treble_omx=false
 drm.service.enabled=1
 vidc.enc.narrow.searchrange=1
 
