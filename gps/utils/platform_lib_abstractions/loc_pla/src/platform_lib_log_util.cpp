@@ -44,14 +44,14 @@ char * get_timestamp(char *str, unsigned long buf_size)
 // Below are the location conf file paths
 #ifdef __ANDROID__
 
-#define LOC_PATH_GPS_CONF_STR      "/vendor/etc/gps.conf"
-#define LOC_PATH_IZAT_CONF_STR     "/vendor/etc/izat.conf"
-#define LOC_PATH_FLP_CONF_STR      "/vendor/etc/flp.conf"
-#define LOC_PATH_LOWI_CONF_STR     "/vendor/etc/lowi.conf"
-#define LOC_PATH_SAP_CONF_STR      "/vendor/etc/sap.conf"
-#define LOC_PATH_APDR_CONF_STR     "/vendor/etc/apdr.conf"
-#define LOC_PATH_XTWIFI_CONF_STR   "/vendor/etc/xtwifi.conf"
-#define LOC_PATH_QUIPC_CONF_STR    "/vendor/etc/quipc.conf"
+#define LOC_PATH_GPS_CONF_STR      "/etc/gps.conf"
+#define LOC_PATH_IZAT_CONF_STR     "/etc/izat.conf"
+#define LOC_PATH_FLP_CONF_STR      "/etc/flp.conf"
+#define LOC_PATH_LOWI_CONF_STR     "/etc/lowi.conf"
+#define LOC_PATH_SAP_CONF_STR      "/etc/sap.conf"
+#define LOC_PATH_APDR_CONF_STR     "/etc/apdr.conf"
+#define LOC_PATH_XTWIFI_CONF_STR   "/etc/xtwifi.conf"
+#define LOC_PATH_QUIPC_CONF_STR    "/etc/quipc.conf"
 
 #else
 
