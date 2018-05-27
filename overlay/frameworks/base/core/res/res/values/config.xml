@@ -126,7 +126,7 @@
    </string-array>
  
     <!-- Values for GPS configuration -->
-    <string-array name="config_gpsParameters">
+    <string-array translatable="false" name="config_gpsParameters">
         <item>XTRA_SERVER_1=https://xtrapath1.izatcloud.net/xtra3grc.bin</item>
         <item>XTRA_SERVER_2=https://xtrapath2.izatcloud.net/xtra3grc.bin</item>
         <item>XTRA_SERVER_3=https://xtrapath3.izatcloud.net/xtra3grc.binn</item>
@@ -295,6 +295,9 @@
 
     <!-- Set to true to add links to Cell Broadcast app from Settings and MMS app. -->
     <bool name="config_cellBroadcastAppLinks">true</bool>
+
+    <!-- Maximum number of supported users -->
+    <integer name="config_multiuserMaximumUsers">4</integer>
 
     <!-- Boolean indicating if current platform supports BLE peripheral mode -->
     <bool name="config_bluetooth_le_peripheral_mode_supported">true</bool>
