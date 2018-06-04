@@ -62,6 +62,8 @@ on boot
     write /proc/sys/vm/swappiness 0
     write /proc/sys/vm/vfs_cache_pressure 80
 
+on init
+
     # Enable IMS
     setprop service.qti.ims.enabled 1
 
