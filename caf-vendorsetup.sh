@@ -1,0 +1,2 @@
+add_lunch_combo du_lettuce-userdebug
+add_lunch_combo du_lettuce-eng
