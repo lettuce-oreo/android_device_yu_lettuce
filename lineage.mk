@@ -25,6 +25,10 @@ PRODUCT_NAME := lineage_lettuce
 BOARD_VENDOR := yu
 PRODUCT_DEVICE := lettuce
 
+# Vendor security patch level
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.lineage.build.vendor_security_patch=2016-05-01
+
 TARGET_BOOT_ANIMATION_RES := 720
 
 PRODUCT_GMS_CLIENTID_BASE := android-micromax
