@@ -1,0 +1,2 @@
+add_lunch_combo aosip_lettuce-userdebug
+add_lunch_combo aosip_lettuce-eng
