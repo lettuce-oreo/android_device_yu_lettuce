@@ -107,7 +107,7 @@
         <item>XTRA_VERSION_CHECK=1</item>
         <item>XTRA_CA_PATH=/system/etc/security/cacerts</item>
         <item>NTP_SERVER=asia.pool.ntp.org</item>
-        <item>CAPABILITIES=0x37</time>
+        <item>CAPABILITIES=0x37</item>
         <item>SUPL_ES=0</item>
         <item>SUPL_VER=0x10000</item>
         <item>LPP_PROFILE=2</item>
