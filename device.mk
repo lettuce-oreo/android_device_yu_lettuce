@@ -130,6 +130,10 @@ PRODUCT_PACKAGES += \
     libshims_camera \
     libshims_ims
 
+# Telephony
+PRODUCT_PACKAGES += telephony-ext
+PRODUCT_BOOT_JARS += telephony-ext
+
 # Thermals
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/thermal-engine.conf:system/vendor/etc/thermal-engine.conf
