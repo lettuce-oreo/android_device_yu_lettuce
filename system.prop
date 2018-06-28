@@ -1,8 +1,24 @@
 # Audio
-ro.vendor.audio.sdk.fluencetype=fluence
+af.fast_track_multiplier=1
+audio.deep_buffer.media=true
+audio.offload.min.duration.secs=30
+audio.offload.video=true
+persist.vendor.audio.fluence.speaker=true
 persist.vendor.audio.fluence.voicecall=true
 persist.vendor.audio.fluence.voicerec=false
-persist.vendor.audio.fluence.speaker=true
+ro.vendor.audio.sdk.fluencetype=fluence
+vendor.audio.av.streaming.offload.enable=true
+vendor.audio.offload.buffer.size.kb=64
+vendor.audio.offload.gapless.enabled=true
+vendor.audio_hal.period_size=192
+vendor.voice.path.for.pcm.voip=true
+
+# Bluetooth
+qcom.bluetooth.soc=smd
+ro.bluetooth.dun=true
+ro.bluetooth.hfp.ver=1.7
+ro.bluetooth.sap=true
+ro.qualcomm.bt.hci_transport=smd
 
 # Boot
 ro.build.shutdown_timeout=0
@@ -17,7 +33,22 @@ dalvik.vm.checkjni=false
 dalvik.vm.verify-bytecode=false
 persist.sys.purgeable_assets=1
 
+# Dex2oat optimisation
+dalvik.vm.boot-dex2oat-threads=8
+dalvik.vm.dex2oat-flags=--no-watch-dog
+dalvik.vm.dex2oat-swap=false
+dalvik.vm.dex2oat-threads=4
+dalvik.vm.image-dex2oat-threads=4
+ro.sys.fw.dex2oat_thread_count=4
+
 # Display
+debug.hwui.use_buffer_age=false
+debug.composition.type=c2d
+debug.mdpcomp.idletime=600
+persist.hwc.mdpcomp.enable=true
+persist.hwc.ptor.enable=true
+debug.enable.sglscale=1
+ro.opengles.version=196608
 ro.sf.lcd_density=320
 
 # Fling velocities
@@ -42,6 +73,9 @@ dhcp.eth0.dns2=8.8.4.4
 dhcp.wlan0.dns1=8.8.8.8
 dhcp.wlan0.dns2=8.8.4.4
 
+# Healthd
+ro.enable_boot_charger_mode=1
+
 # IMS
 net.lte.volte_call_capable=true
 persist.data.iwlan.enable=true
@@ -62,6 +96,11 @@ persist.radio.VT_HYBRID_ENABLE=1
 persist.radio.VT_USE_MDM_TIME=0
 persist.volte_enabled_by_hw=1
 telephony.lteOnCdmaDevice=1
+
+# Media
+persist.media.treble_omx=false
+drm.service.enabled=1
+vidc.enc.narrow.searchrange=1
 
 # NITZ
 persist.rild.nitz_plmn=
@@ -87,11 +126,48 @@ ro.config.always_show_roaming=true
 ro.telephony.default_network=9,9
 
 # Perf
+ro.am.reschedule_service=true
+ro.config.max_starting_bg=8
+ro.core_ctl_min_cpu=0
+ro.core_ctl_max_cpu=4
+ro.min_freq_0=800000
+ro.sys.fw.bservice_enable=true
+ro.sys.fw.bservice_limit=5
+ro.sys.fw.bservice_age=5000
+ro.sys.fw.use_trim_settings=true
+ro.sys.fw.empty_app_percent=50
+ro.sys.fw.trim_empty_percent=100
+ro.sys.fw.trim_cache_percent=100
+ro.sys.fw.trim_enable_memory=1073741824
+ro.vendor.extension_library=libqti-perfd-client.so
+ro.vendor.qti.am.reschedule_service=true
+ro.vendor.qti.core_ctl_min_cpu=0
+ro.vendor.qti.core_ctl_max_cpu=4
+ro.vendor.qti.sys.fw.bservice_enable=true
+ro.vendor.qti.sys.fw.bservice_limit=5
+ro.vendor.qti.sys.fw.bservice_age=5000
+ro.vendor.qti.sys.fw.use_trim_settings=true
+ro.vendor.qti.sys.fw.empty_app_percent=50
+ro.vendor.qti.sys.fw.trim_empty_percent=100
+ro.vendor.qti.sys.fw.trim_cache_percent=100
+ro.vendor.qti.sys.fw.trim_enable_memory=1073741824
 sys.use_fifo_ui=1
 
 # Power Manager
 pm.sleep_mode=1
 ro.ril.disable.power.collapse=1
 
+# Radio
+persist.data.qmi.adb_logmask=0
+persist.radio.apm_sim_not_pwdn=1
+persist.vendor.radio.apm_sim_not_pwdn=1
+ro.telephony.call_ring.multiple=false
+
 # Sensors
 ro.fusion.magfield.max=250
+
+# Wi-Fi
+wifi.interface=wlan0
+
+# Wi-Fi display
+persist.debug.wfd.enable=1
