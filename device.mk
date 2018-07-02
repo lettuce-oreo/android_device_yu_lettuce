@@ -112,7 +112,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES + \
     libcurl \
     libgnss \
-    libgnsspps
+    libgnsspps \
+    libloc_api_v02 \
+    libloc_ds_api
 
 # GNSS HAL
 PRODUCT_PACKAGES += \

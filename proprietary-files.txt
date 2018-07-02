@@ -119,8 +119,6 @@ vendor/lib64/librpmb.so
 vendor/lib64/libssd.so
 
 # GPS - from crackling
--lib64/libloc_api_v02.so:vendor/lib64/libloc_api_v02.so|ca97a81ea91ca5c7d8dd8c9a9054121ce1446b8a
--lib64/libloc_ds_api.so:vendor/lib64/libloc_ds_api.so|c2ed259789fe01aeced4e06ad1693036852daf7c
 vendor/lib64/hw/flp.default.so|03784211a3d7c144c0bc6f86b50d1cc5eb97f8c5
 vendor/lib64/libflp.so|33793c405cf39858854c8023dec4b4e0d9d79ff0
 vendor/lib64/libgeofence.so|23cb999eb444971170ff60873392706cf003ed23
