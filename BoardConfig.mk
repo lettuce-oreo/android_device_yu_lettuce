@@ -152,6 +152,7 @@ DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/manifest.xml
 TARGET_USES_MEDIA_EXTENSIONS := true
 
 # Power
+TARGET_HAS_NO_POWER_STATS := true
 TARGET_POWERHAL_VARIANT := qcom
 TARGET_TAP_TO_WAKE_NODE := "/sys/devices/soc.0/78b9000.i2c/i2c-5/5-0040/double_tap_enable"
 
