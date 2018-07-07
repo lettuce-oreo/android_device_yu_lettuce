@@ -25,7 +25,7 @@ import com.android.internal.telephony.RIL;
 import com.android.internal.telephony.TelephonyComponentFactory;
 
 import com.qualcomm.qti.internal.telephony.ExtTelephony;
-import com.qualcomm.qti.internal.telephony.HwRIL;
+import com.qualcomm.qti.internal.telephony.ExtRIL;
 
 public class QtiTelephonyComponentFactory extends TelephonyComponentFactory {
 
@@ -43,8 +43,8 @@ public class QtiTelephonyComponentFactory extends TelephonyComponentFactory {
     @Override
     public RIL makeRIL(Context context, int preferredNetworkType,
             int cdmaSubscription, Integer instanceId) {
-        Rlog.d(LOG_TAG, "makeHwRIL");
-        return new HwRIL(context, preferredNetworkType, cdmaSubscription, instanceId);
+        Rlog.d(LOG_TAG, "makeExtRIL");
+        return new ExtRIL(context, preferredNetworkType, cdmaSubscription, instanceId);
     }
 
 }
