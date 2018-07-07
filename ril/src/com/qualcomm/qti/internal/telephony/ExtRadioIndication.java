@@ -22,30 +22,30 @@ import android.telephony.SignalStrength;
 import com.android.internal.telephony.RIL;
 import com.android.internal.telephony.RadioIndication;
 
-import com.qualcomm.qti.internal.telephony.HwRIL;
+import com.qualcomm.qti.internal.telephony.ExtRIL;
 
-public class HwRadioIndication extends RadioIndication {
+public class ExtRadioIndication extends RadioIndication {
 
-    HwRIL mHwRil;
+    ExtRIL mExtRIL;
 
-    public HwRadioIndication(RIL ril) {
+    public ExtRadioIndication(RIL ril) {
         super(ril);
-        if (ril instanceof HwRIL) {
-           mHwRil = (HwRIL) ril;
+        if (ril instanceof ExtRIL) {
+           mExtRIL = (ExtRIL) ril;
         }
     }
 
     @Override
     public void currentSignalStrength(int indicationType,
                                       android.hardware.radio.V1_0.SignalStrength signalStrength) {
-        if (mHwRil != null) {
-            SignalStrength ss = HwRIL.convertHalSignalStrength(signalStrength, mHwRil);
+        if (mExtRIL != null) {
+            SignalStrength ss = ExtRIL.convertHalSignalStrength(signalStrength, mExtRIL);
             // Note this is set to "verbose" because it happens frequently
             // This is always false, so just comment it out
-            //if (RIL.RILJ_LOGV) mHwRil.unsljLogvRet(RIL_UNSOL_SIGNAL_STRENGTH, ss);
+            //if (RIL.RILJ_LOGV) mExtRIL.unsljLogvRet(RIL_UNSOL_SIGNAL_STRENGTH, ss);
 
-            if (mHwRil.getSignalStrengthRegistrant() != null) {
-                mHwRil.getSignalStrengthRegistrant().notifyRegistrant(new AsyncResult (null, ss, null));
+            if (mExtRIL.getSignalStrengthRegistrant() != null) {
+                mExtRIL.getSignalStrengthRegistrant().notifyRegistrant(new AsyncResult (null, ss, null));
             }
         } else {
             super.currentSignalStrength(indicationType, signalStrength);

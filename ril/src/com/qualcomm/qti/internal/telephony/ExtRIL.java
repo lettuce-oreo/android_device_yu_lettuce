@@ -29,8 +29,8 @@ import com.android.internal.telephony.RadioResponse;
 import com.android.internal.telephony.RadioIndication;
 import com.android.internal.telephony.SubscriptionController;
 
-import com.qualcomm.qti.internal.telephony.HwRadioResponse;
-import com.qualcomm.qti.internal.telephony.HwRadioIndication;
+import com.qualcomm.qti.internal.telephony.ExtRadioResponse;
+import com.qualcomm.qti.internal.telephony.ExtRadioIndication;
 
 import static android.telephony.TelephonyManager.NETWORK_TYPE_UNKNOWN;
 import static android.telephony.TelephonyManager.NETWORK_TYPE_GPRS;
@@ -44,11 +44,11 @@ import static android.telephony.TelephonyManager.NETWORK_TYPE_HSPAP;
 import static android.telephony.TelephonyManager.NETWORK_TYPE_GSM;
 import static android.telephony.TelephonyManager.NETWORK_TYPE_LTE_CA;
 
-public class HwRIL extends RIL {
+public class ExtRIL extends RIL {
 
     Integer mInstanceId;
 
-    public HwRIL(Context context, int preferredNetworkType,
+    public ExtRIL(Context context, int preferredNetworkType,
             int cdmaSubscription, Integer instanceId) {
         super(context, preferredNetworkType, cdmaSubscription, instanceId);
 
@@ -57,12 +57,12 @@ public class HwRIL extends RIL {
 
     @Override
     protected RadioResponse createRadioResponse(RIL ril) {
-        return new HwRadioResponse(ril);
+        return new ExtRadioResponse(ril);
     }
 
     @Override
     protected RadioIndication createRadioIndication(RIL ril) {
-        return new HwRadioIndication(ril);
+        return new ExtRadioIndication(ril);
     }
 
     Object processResp(RadioResponseInfo i) {
@@ -82,7 +82,7 @@ public class HwRIL extends RIL {
     }
 
     static SignalStrength convertHalSignalStrength(
-            android.hardware.radio.V1_0.SignalStrength signalStrength, HwRIL ril) {
+            android.hardware.radio.V1_0.SignalStrength signalStrength, ExtRIL ril) {
         String[] signalCustGsm = SystemProperties.get("gsm.sigcust.gsm",
                 "5,false,-109,-103,-97,-91,-85").split(",");
         String[] signalCustLte = SystemProperties.get("gsm.sigcust.lte",

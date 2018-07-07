@@ -25,16 +25,16 @@ import android.telephony.SignalStrength;
 import com.android.internal.telephony.RIL;
 import com.android.internal.telephony.RadioResponse;
 
-import com.qualcomm.qti.internal.telephony.HwRIL;
+import com.qualcomm.qti.internal.telephony.ExtRIL;
 
-public class HwRadioResponse extends RadioResponse {
+public class ExtRadioResponse extends RadioResponse {
 
-    HwRIL mHwRil;
+    ExtRIL mExtRIL;
 
-    public HwRadioResponse(RIL ril) {
+    public ExtRadioResponse(RIL ril) {
         super(ril);
-        if (ril instanceof HwRIL) {
-           mHwRil = (HwRIL) ril;
+        if (ril instanceof ExtRIL) {
+           mExtRIL = (ExtRIL) ril;
         }
     }
 
@@ -53,7 +53,7 @@ public class HwRadioResponse extends RadioResponse {
     @Override
     public void getSignalStrengthResponse(RadioResponseInfo responseInfo,
                                           android.hardware.radio.V1_0.SignalStrength sigStrength) {
-        if (mHwRil != null) {
+        if (mExtRIL != null) {
             responseSignalStrength(responseInfo, sigStrength);
         } else {
             super.getSignalStrengthResponse(responseInfo, sigStrength);
@@ -62,14 +62,14 @@ public class HwRadioResponse extends RadioResponse {
 
     private void responseSignalStrength(RadioResponseInfo responseInfo,
                                         android.hardware.radio.V1_0.SignalStrength sigStrength) {
-        Object rr = mHwRil.processResp(responseInfo);
+        Object rr = mExtRIL.processResp(responseInfo);
 
         if (rr != null) {
-            SignalStrength ret = HwRIL.convertHalSignalStrength(sigStrength, mHwRil);
+            SignalStrength ret = ExtRIL.convertHalSignalStrength(sigStrength, mExtRIL);
             if (responseInfo.error == RadioError.NONE) {
-                sendMessageResponse(mHwRil.getMsgFromRequest(rr), ret);
+                sendMessageResponse(mExtRIL.getMsgFromRequest(rr), ret);
             }
-            mHwRil.processRespDone(rr, responseInfo, ret);
+            mExtRIL.processRespDone(rr, responseInfo, ret);
         }
     }
 
