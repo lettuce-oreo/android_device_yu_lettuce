@@ -173,6 +173,7 @@ TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
 # Radio
 MALLOC_SVELTE := true
 TARGET_RIL_VARIANT := caf
+TARGET_PROVIDES_QTI_TELEPHONY_JAR := true
 
 # Recovery
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.qcom
