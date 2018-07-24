@@ -1,0 +1,33 @@
+From 316ea69646d11139c2d94a399e967ed0817368c8 Mon Sep 17 00:00:00 2001
+From: Simon Shields <simon@lineageos.org>
+Date: Thu, 24 Aug 2017 20:52:30 +1000
+Subject: [PATCH] releasetools: don't assert device
+
+this is broken on twrp
+
+Change-Id: I50b52e711cea1a45327d537854c9cf299ea96f9c
+Signed-off-by: Marco Zanin (B--B) <mrczn.bb@gmail.com>
+Signed-off-by: ghostrider reborn <gh0strider.2k18.reborn@gmail.com>
+---
+ tools/releasetools/edify_generator.py | 8 +-------
+ 1 file changed, 1 insertion(+), 7 deletions(-)
+
+diff --git a/tools/releasetools/edify_generator.py b/tools/releasetools/edify_generator.py
+index 2ddb5cf3fb..5ae80e57a6 100644
+--- a/tools/releasetools/edify_generator.py
++++ b/tools/releasetools/edify_generator.py
+@@ -145,13 +145,7 @@ class EdifyGenerator(object):
+ 
+   def AssertDevice(self, device):
+     """Assert that the device identifier is the given string."""
+-    cmd = ('assert(' +
+-           ' || \0'.join(['getprop("ro.product.device") == "%s" || getprop("ro.build.product") == "%s"'
+-                         % (i, i) for i in device.split(",")]) +
+-           ' || abort("E%d: This package is for device: %s; ' +
+-           'this device is " + getprop("ro.product.device") + ".");' +
+-           ');') % (common.ErrorCode.DEVICE_MISMATCH, device)
+-    self.script.append(self.WordWrap(cmd))
++    pass
+ 
+   def AssertSomeBootloader(self, *bootloaders):
+     """Assert that the bootloader version is one of *bootloaders."""

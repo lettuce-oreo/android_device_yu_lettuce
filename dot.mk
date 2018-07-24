@@ -18,12 +18,19 @@ $(call inherit-product, device/yu/lettuce/full_lettuce.mk)
 # Inherit some common dotOS stuff.
 $(call inherit-product, vendor/dot/config/common.mk)
 
+# lettuce was launched with Android LP
+$(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_l.mk)
+
 # Must define platform variant before including any common things
 TARGET_BOARD_PLATFORM_VARIANT := msm8916
 
 PRODUCT_NAME := dot_lettuce
 BOARD_VENDOR := yu
 PRODUCT_DEVICE := lettuce
+
+# Vendor security patch level
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.lineage.build.vendor_security_patch=2016-05-01
 
 TARGET_BOOT_ANIMATION_RES := 720
 
@@ -35,3 +42,5 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     TARGET_DEVICE=YUPHORIA
 
 BUILD_FINGERPRINT := YU/YUPHORIA/YUPHORIA:5.1.1/LMY49J/YOG4PAS8A8:user/release-keys
+
+TARGET_OTA_ASSERT_DEVICE := YUPHORIA,lettuce,YU5010,YU5010A
