@@ -150,7 +150,9 @@ BOARD_KERNEL_TAGS_OFFSET := 0x01E00000
 BOARD_RAMDISK_OFFSET := 0x02000000
 LZMA_RAMDISK_TARGETS := recovery
 
+KERNEL_TOOLCHAIN := $(ANDROID_BUILD_TOP)/prebuilts/gcc/linux-x86/aarch64/aarch64-opt-linux-android/bin
 TARGET_KERNEL_CONFIG := lineageos_lettuce_defconfig
+TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-opt-linux-android-
 TARGET_KERNEL_SOURCE := kernel/cyanogen/msm8916
 
 # Lights
