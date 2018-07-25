@@ -14,41 +14,18 @@ CRs-Fixed: 914710
  1 file changed, 7 insertions(+)
 
 diff --git a/java/com/android/incallui/ProximitySensor.java b/java/com/android/incallui/ProximitySensor.java
-index 653d85be9..860eaeef8 100644
+index cb87252ca..91291980a 100644
 --- a/java/com/android/incallui/ProximitySensor.java
 +++ b/java/com/android/incallui/ProximitySensor.java
-@@ -20,6 +20,7 @@
- import android.hardware.display.DisplayManager;
- import android.hardware.display.DisplayManager.DisplayListener;
- import android.os.PowerManager;
-+import android.provider.Settings;
- import android.support.annotation.NonNull;
- import android.telecom.CallAudioState;
- import android.view.Display;
-@@ -42,6 +43,7 @@
-     implements AccelerometerListener.OrientationListener, InCallStateListener, AudioModeListener {
+@@ -49,6 +49,7 @@ public class ProximitySensor
+     implements AccelerometerListener.OrientationListener, InCallStateListener, AudioModeListener, SensorEventListener {
  
    private static final String TAG = ProximitySensor.class.getSimpleName();
 +  private static final String PROXIMITY_SENSOR = "proximity_sensor";
  
    private final PowerManager mPowerManager;
    private final PowerManager.WakeLock mProximityWakeLock;
-@@ -54,11 +56,14 @@
-   private boolean mDialpadVisible;
-   private boolean mIsAttemptingVideoCall;
-   private boolean mIsVideoCall;
-+  
-+  private Context mContext;
- 
-   public ProximitySensor(
-       @NonNull Context context,
-       @NonNull AudioModeProvider audioModeProvider,
-       @NonNull AccelerometerListener accelerometerListener) {
-+    mContext = context;
-     mPowerManager = (PowerManager) context.getSystemService(Context.POWER_SERVICE);
-     if (mPowerManager.isWakeLockLevelSupported(PowerManager.PROXIMITY_SCREEN_OFF_WAKE_LOCK)) {
-       mProximityWakeLock =
-@@ -211,6 +216,8 @@ private synchronized void updateProximitySensorMode() {
+@@ -278,6 +279,8 @@ public class ProximitySensor
              || CallAudioState.ROUTE_BLUETOOTH == audioRoute
              || mIsAttemptingVideoCall
              || mIsVideoCall);
