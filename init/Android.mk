@@ -8,6 +8,7 @@ LOCAL_C_INCLUDES := \
     system/core/init \
     external/selinux/libselinux/include
 LOCAL_CFLAGS := -Wall
+LOCAL_CPP_STD := c++17
 LOCAL_SRC_FILES := init_msm8916.cpp
 ifneq ($(TARGET_LIBINIT_MSM8916_DEFINES_FILE),)
   LOCAL_SRC_FILES += ../../../../$(TARGET_LIBINIT_MSM8916_DEFINES_FILE)
