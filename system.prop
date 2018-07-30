@@ -102,6 +102,9 @@ persist.media.treble_omx=false
 drm.service.enabled=1
 vidc.enc.narrow.searchrange=1
 
+# Navigation bar
+qemu.hw.mainkeys=0
+
 # NITZ
 persist.rild.nitz_plmn=
 persist.rild.nitz_long_ons_0=
