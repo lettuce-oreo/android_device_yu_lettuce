@@ -168,6 +168,7 @@ ro.ril.disable.power.collapse=1
 
 # Radio
 persist.data.qmi.adb_logmask=0
+persist.radio.add_power_save=1
 persist.radio.apm_sim_not_pwdn=1
 persist.vendor.radio.apm_sim_not_pwdn=1
 ro.telephony.call_ring.multiple=false
