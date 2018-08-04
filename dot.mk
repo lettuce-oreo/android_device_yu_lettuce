@@ -21,10 +21,6 @@ $(call inherit-product, vendor/dot/config/common.mk)
 # lettuce was launched with Android LP
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_l.mk)
 
-# Inherit Android Go default properties
-$(call inherit-product, build/make/target/product/go_defaults_common.mk)
-$(call inherit-product-if-exists, frameworks/base/data/sounds/AudioPackageGo.mk)
-
 # Must define platform variant before including any common things
 TARGET_BOARD_PLATFORM_VARIANT := msm8916
 

@@ -32,7 +32,6 @@ persist.camera.hal.debug.mask=0
 dalvik.vm.checkjni=false
 dalvik.vm.verify-bytecode=false
 persist.sys.purgeable_assets=1
-dalvik.vm.foreground-heap-growth-multiplier=2.0
 
 # Dex2oat optimisation
 dalvik.vm.boot-dex2oat-threads=8
