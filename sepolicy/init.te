@@ -1,4 +1,0 @@
-allow init ram_device:blk_file write;
-allow init sysfs_zram:file { create_file_perms rw_file_perms };
-allow init sysfs_zram:dir rw_dir_perms;
-allow init proc_dirty_ratio:file write;
