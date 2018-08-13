@@ -100,9 +100,9 @@ PRODUCT_PACKAGES += \
     android.hardware.drm@1.0-impl
 
 # FM
-PRODUCT_PACKAGES += \
-    FMRadio \
-    libfmjni
+#PRODUCT_PACKAGES += \
+#    FMRadio \
+#    libfmjni
 
 # GPS
 PRODUCT_PACKAGES += \
