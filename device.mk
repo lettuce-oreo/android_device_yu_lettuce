@@ -266,12 +266,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/sensors/_hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/_hals.conf
 
-# Shims
-PRODUCT_PACKAGES += \
-    libshims_boringssl \
-    libshims_camera \
-    libshims_ims
-
 # TextClassifier smart selection model
 PRODUCT_PACKAGES += \
     textclassifier.smartselection.bundle1
