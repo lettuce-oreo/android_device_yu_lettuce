@@ -73,9 +73,9 @@ PRODUCT_PACKAGES += \
     Snap \
     Camera2
 
-#PRODUCT_PACKAGES += \
-#    android.hardware.camera.provider@2.4-impl \
-#    camera.device@3.2-impl
+PRODUCT_PACKAGES += \
+    android.hardware.camera.provider@2.4-impl \
+    camera.device@3.2-impl
 
 # Dalvik
 $(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
@@ -111,9 +111,9 @@ PRODUCT_PACKAGES += \
     libshims_get_process_name \
     libshims_flp
 
-#PRODUCT_PACKAGES += \
-#    android.hardware.gnss@1.0-impl \
-#    android.hardware.gnss@1.0-service
+PRODUCT_PACKAGES += \
+    android.hardware.gnss@1.0-impl \
+    android.hardware.gnss@1.0-service
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/gps/flp.conf:system/etc/flp.conf \
