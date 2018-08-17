@@ -28,6 +28,12 @@ PRODUCT_NAME := aosp_lettuce
 BOARD_VENDOR := yu
 PRODUCT_DEVICE := lettuce
 
+# Gapps
+TARGET_GAPPS_ARCH := arm64
+TARGET_DENSITY := xhdpi
+TARGET_BOOT_ANIMATION_RES := 720
+TARGET_MINIMAL_APPS := true
+
 # Vendor security patch level
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.lineage.build.vendor_security_patch=2016-05-01
