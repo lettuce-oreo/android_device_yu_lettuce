@@ -101,6 +101,9 @@ on post-fs-data
     # Raise SDCC idle timeout value to 10 seconds
     write /sys/devices/platform/msm_sdcc.3/idle_timeout 10
 
+    # Ensure .bt_nv.bin is owned by bluetooth
+    chown bluetooth bluetooth /persist/.bt_nv.bin
+
     # Create directory from IMS services
     mkdir /data/shared 0755
     chown system system /data/shared
