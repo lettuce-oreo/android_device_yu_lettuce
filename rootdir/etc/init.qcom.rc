@@ -229,6 +229,10 @@ on boot
     # Permissions required for power HAL
     chown system system /sys/devices/system/cpu/cpu0/core_ctl/max_cpus
 
+    # Enable double tap to wake
+    chmod 0644 /sys/devices/soc.0/78b9000.i2c/i2c-5/5-0040/double_tap_enable
+    write /sys/devices/soc.0/78b9000.i2c/i2c-5/5-0040/double_tap_enable 1
+
     # Wifi firmware reload path
     chown wifi wifi /sys/module/wlan/parameters/fwpath
 
