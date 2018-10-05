@@ -24,7 +24,7 @@ on enable-low-power
     write /sys/devices/system/cpu/cpufreq/interactive/hispeed_freq 998400
     write /sys/devices/system/cpu/cpufreq/interactive/io_is_busy 0
     write /sys/devices/system/cpu/cpufreq/interactive/boostpulse_duration 60000
-    write /sys/devices/system/cpu/cpufreq/interactive/target_loads "1 998400:80 1094400:85 1200000:90"
+    write /sys/devices/system/cpu/cpufreq/interactive/target_loads "1 998400:80 1094400:85 1209600:90"
     write /sys/devices/system/cpu/cpufreq/interactive/min_sample_time 60000
     write /sys/devices/system/cpu/cpufreq/interactive/max_freq_hysteresis 80000
     
@@ -36,8 +36,9 @@ on enable-low-power
     write /sys/devices/system/cpu/cpu2/online 1
     write /sys/devices/system/cpu/cpu3/online 1
     
-    # set minimum CPU frequency
-    write /sys/module/msm_performance/parameters/cpu_min_freq "1:200000 2:200000 3:200000 4:200000"
+    # set min/max CPU frequency
+    write /sys/module/msm_performance/parameters/cpu_min_freq "0:200000 1:200000 2:200000 3:200000"
+    write /sys/module/msm_performance/parameters/cpu_max_freq "0:1209600 1:1209600 2:1209600 3:1209600"
     
     # Enable low power modes
     write /sys/module/lpm_levels/parameters/sleep_disabled 0
