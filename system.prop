@@ -57,22 +57,22 @@ ro.min.fling_velocity=160
 ro.max.fling_velocity=20000
 
 # Google DNS
-net.dns1=8.8.8.8
-net.dns2=8.8.4.4
-net.rmnet0.dns1=8.8.8.8
-net.rmnet0.dns2=8.8.4.4
-net.gprs.dns1=8.8.8.8
-net.gprs.dns2=8.8.4.4
-net.ppp0.dns1=8.8.8.8
-net.ppp0.dns2=8.8.4.4
-net.wlan0.dns1=8.8.8.8
-net.wlan0.dns2=8.8.4.4
-net.eth0.dns1=8.8.8.8
-net.eth0.dns2=8.8.4.4
-dhcp.eth0.dns1=8.8.8.8
-dhcp.eth0.dns2=8.8.4.4
-dhcp.wlan0.dns1=8.8.8.8
-dhcp.wlan0.dns2=8.8.4.4
+net.dns1=1.1.1.1
+net.dns2=1.0.0.1
+net.rmnet0.dns1=1.1.1.1
+net.rmnet0.dns2=1.0.0.1
+net.gprs.dns1=1.1.1.1
+net.gprs.dns2=1.0.0.1
+net.ppp0.dns1=1.1.1.1
+net.ppp0.dns2=1.0.0.1
+net.wlan0.dns1=1.1.1.1
+net.wlan0.dns2=1.0.0.1
+net.eth0.dns1=1.1.1.1
+net.eth0.dns2=1.0.0.1
+dhcp.eth0.dns1=1.1.1.1
+dhcp.eth0.dns2=1.0.0.1
+dhcp.wlan0.dns1=1.1.1.1
+dhcp.wlan0.dns2=1.0.0.1
 
 # Healthd
 ro.enable_boot_charger_mode=1
