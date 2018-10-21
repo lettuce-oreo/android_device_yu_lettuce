@@ -28,5 +28,7 @@ if [ ! -d $GCC_7_DIR ]; then
     echo -e "ERROR: Please clone Linaro 7.x from $GCC_7_LINK (opt-linaro-7.x branch) \nto $GCC_7_DIR, before continuing build !!\n"
     echo -e "Or else if it is present elsewhere, update the dir in BoardConfig.mk."
   fi
+  
+  tput sgr0
 
 fi
