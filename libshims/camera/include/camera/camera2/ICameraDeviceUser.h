@@ -27,7 +27,7 @@ namespace android {
 
 class ICameraDeviceUserClient;
 class IGraphicBufferProducer;
-class CaptureRequest;
+struct CaptureRequest;
 class CameraMetadata;
 class OutputConfiguration;
 
